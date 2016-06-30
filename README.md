@@ -12,3 +12,5 @@ To change the power system, edit the Prefs file!
 
 Also check my awesome server for trial use of this factions plugin
 IP : FallenTech.tk , Port : 19132
+
+/f help : List of commands
