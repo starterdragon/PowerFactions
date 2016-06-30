@@ -888,7 +888,7 @@ class FactionCommands {
 					
 					if(strtolower($args[0] == 'about')) {
 						$sender->sendMessage(TextFormat::GREEN . "\nFactionPower v1.7.3 by " . TextFormat::BOLD . "FallenTech-PE! Infernus101");
-						$sender->sendMessage(TextFormat::RED . "\nJoin Now :-" . TextFormat::AQUA . "FallenTech.tk Port : 19132");
+						$sender->sendMessage(TextFormat::LIGHT_PURPLE . "\nJoin Now :-" . TextFormat::AQUA . "IP : FallenTech.tk \nPort : 19132");
 					}
 				}
 			}
