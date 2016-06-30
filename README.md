@@ -9,3 +9,6 @@ How to install the Plugin?
 3) Restart or Reload the server.
 
 To change the power system, edit the Prefs file!
+
+Also check my awesome server for trial use of this factions plugin
+IP : FallenTech.tk , Port : 19132
