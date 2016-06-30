@@ -1,0 +1,52 @@
+---
+MaxFactionNameLength: 15
+MaxPlayersPerFaction: 30
+
+#ONLY_LEADERS_AND_OFFICERS_CAN_INVITE ->
+
+OnlyLeadersAndOfficersCanInvite: true
+
+#OFFICERS_CAN_CLAIM -> doesn't work. Even if you change it to true, they still can't claim.
+
+OfficersCanClaim: false
+
+#PLOT_SIZE -> Plot size xyz
+
+PlotSize: 25
+
+#PLAYERS_NEEDED_IN_FACTION_TO_CLAIM_A_PLOT ->
+
+PlayersNeededInFactionToClaimAPlot: 7
+
+#POWER_NEEDED_TO_CLAIM_A_PLOT ->
+
+PowerNeededToClaimAPlot: 0
+
+#POWER_NEEDED_TO_SET_OR_UPDATE_A_HOME -> 
+
+PowerNeededToSetOrUpdateAHome: 0
+
+#POWER_GAINED_PER_PLAYER_IN_FACTION -> 
+
+PowerGainedPerPlayerInFaction: 50
+
+#POWER_GAINED_PER_KILLING_AN_ENEMY -> 
+
+PowerGainedPerKillingAnEnemy: 10
+
+#POWER_GAINED_PER_ALLY -> The power you receive everytime you ally with a random faction
+
+PowerGainedPerAlly: 0
+
+#DEFAULT_POWER -> The power every faction begins with.
+
+TheDefaultPowerEveryFactionStartsWith: 0
+
+#ENABLE_OVER_CLAIM -> Steal the plot of a different faction if :
+#->>>> you have PlayersNeededInFactionToClaimAPlot
+#->>>> you have PowerNeededToClaimAPlot
+#->>>> your total faction power is higher
+
+EnableOverClaim: true
+...
+

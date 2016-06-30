@@ -1,0 +1,14 @@
+name: FactionPower
+author: Infernus101
+description: A Plugin For Easily Managing Factions and Faction power.
+version: 1.7.3
+main: FactionPower\FactionMain
+api: [2.0.0]
+commands:
+  f:
+    description: use /f help for all parameters
+    permission: f.command
+permissions:
+  f.command:
+    default: true
+    description: "Allow use of all faction commands"
