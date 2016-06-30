@@ -1,6 +1,6 @@
 name: FactionPower
 author: Infernus101
-description: A Plugin For Easily Managing Factions and Faction power.
+description: A Plugin For Easily Managing Factions and Faction Power.
 version: 1.7.3
 main: FactionPower\FactionMain
 api: [2.0.0]
