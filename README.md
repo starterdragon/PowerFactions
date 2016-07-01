@@ -1,4 +1,9 @@
 # POWERFACTIONS
+TO-DO:
+1. /f topfaction command
+2. /f chat command
+3. Economy support
+
 Add power management in your Faction server also if you get faction total power more than 1000 then you can claim areas and overclaim other faction land if you have more power than them! For Genisys, a fork of PocketMine-MP!
 How to install the Plugin?
 
