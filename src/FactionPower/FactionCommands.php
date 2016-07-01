@@ -781,7 +781,7 @@ class FactionCommands {
                         
                         
                     }
-                    if(strtolower($args[0] == "funcliam")){
+                    if(strtolower($args[0] == "funclaim")){
                         if(!isset($args[1])){
                             $sender->sendMessage($this->plugin->formatMessage("§6- §3Usage: /f funclaim <faction>"));
                             return true;
