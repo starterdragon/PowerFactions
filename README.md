@@ -1,4 +1,4 @@
-# POWERFACTIONS
+# =POWERFACTIONS=
 TO-DO:
 1. /f topfaction command
 2. /f chat command
