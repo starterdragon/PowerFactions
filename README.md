@@ -15,6 +15,8 @@ PowerFactions is a Factions plugin for Genisys and Pocketmine 0.15.0
 
 >Then Restart your server! That Simple xD
 
+>If you want, PureChat support you need to change faction-power in all the files to Faction'sPro even the namespace and plugin name!
+
 ### TO-DOs
 
  - /f chat command
