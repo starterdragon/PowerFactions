@@ -1,4 +1,6 @@
 # POWERFACTIONS
+
+[![Join the chat at https://gitter.im/Infernus101/PowerFactions](https://badges.gitter.im/Infernus101/PowerFactions.svg)](https://gitter.im/Infernus101/PowerFactions?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 PowerFactions is a Factions plugin for Genisys and Pocketmine 0.15.0
 
 > Add power management in your Faction server also if you get faction total power more than 1000 then you can claim areas and overclaim other faction land if you have more power than them!
