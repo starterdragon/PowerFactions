@@ -798,25 +798,7 @@ class FactionCommands {
                         $this->plugin->db->query("DELETE FROM plots WHERE faction='$args[1]';");
                         
                     }
-                    /* pssst. this code is well but the getAllies function sucks as fack.
-                    if(strtolower($args[0] == "allies")){
-                        if(!isset($args[1])){
-                            if(!$this->plugin->isInFaction($player)) {
-							    $sender->sendMessage($this->plugin->formatMessage("You must be in a faction to do this."));
-                                return true;
-						    }
-                            $fac = $this->plugin->getPlayerFaction($player);
-                            $all_allies = $this->plugin->getAllAllies($fac);
-                            $sender->sendMessage(TextFormat::GREEN . "Allies of : <^$fac^>\n" . $all_allies);
-                        } else {
-                            if(!$this->plugin->factionExists($args[1])){
-							    $sender->sendMessage($this->plugin->formatMessage("Requested faction does not exist."));
-                                return true;
-                            }
-                            $all_allies = $this->plugin->getAllAllies($args[1]);
-                            $sender->sendMessage(TextFormat::GREEN . "Allies of : <^$args[1]^>\n" . $all_allies);
-                        }
-                    }*/
+               
                     if(strtolower($args[0] == "aaccept")){
                         if(!$this->plugin->isInFaction($player)) {
 							$sender->sendMessage($this->plugin->formatMessage("You must be in a faction to do this"));
