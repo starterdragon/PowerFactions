@@ -2,20 +2,6 @@
 
 namespace FactionPower;
 
-/*
- * 
- * v1.3.0 To Do List
- * [X] Separate into Command, Listener, and Main files
- * [X] Implement commands (plot claim, plot del)
- * [X] Get plots to work
- * [X] Add plot to config
- * [X] Add faction description /f desc <faction>
- * [X] Only leaders can edit motd, only members can check
- * [X] More beautiful looking (and working) config
- * 
- * 
- */
-
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
@@ -106,12 +92,6 @@ class FactionMain extends PluginBase implements Listener {
             return true;
         } 
     }
-  
- /*   public function getAllAllies($faction){
-        $result = $this->db->query("SELECT * FROM allies WHERE faction1 = '$faction';");
-        $resultArr = $result->fetchArray(SQLITE3_ASSOC);
-        return $resultArr['faction2']; 
-    }*/ // psst. very glitchy, indeed.m #BLAME_PANDA
     public function deleteAllies($faction1, $faction2){
         $stmt = $this->db->prepare("DELETE FROM allies WHERE faction1 = '$faction1' AND faction2 = '$faction2';");   
 		$result = $stmt->execute();
