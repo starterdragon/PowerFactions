@@ -1,22 +1,29 @@
-# =POWERFACTIONS=
-TO-DO:
-1. /f chat command
-2. Economy support
+# POWERFACTIONS
+PowerFactions is a Factions plugin for Genisys and Pocketmine 0.15.0
 
-/F TOP IS READY! NEED LIKE 50 STARS THEN I WILL RELEASE IT!
+> Add power management in your Faction server also if you get faction total power more than 1000 then you can claim areas and overclaim other faction land if you have more power than them!
 
-Add power management in your Faction server also if you get faction total power more than 1000 then you can claim areas and overclaim other faction land if you have more power than them! For Genisys, a fork of PocketMine-MP!
-How to install the Plugin?
+/F TOPFACTIONS COMMAND IS READY. I NEED 50 STARS THEN I WILL RELEASE IT!
 
-1) Download the .zip file from here or .phar file from releases section!
+### Version
+1.7.3
+### Installation
 
-2) Drop it in your plugins folder.
+>You need to extract the plugin first!
 
-3) Restart or Reload the server.
+>Put it in your plugins folder
 
-To change the power system, edit the Prefs file!
+>Then Restart your server! That Simple xD
 
-Also check my awesome server for trial use of this factions plugin
-IP : FallenTech.tk , Port : 19132
+### TO-DOs
 
-/f help : List of commands
+ - /f chat command
+ - Economy support
+
+License
+----
+
+MIT
+
+
+**Free plugin! Dont forget to star so that i would release /f topfaction command!**
