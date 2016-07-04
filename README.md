@@ -3,7 +3,7 @@ PowerFactions is a Factions plugin for Genisys and Pocketmine 0.15.0
 
 > Add power management in your Faction server also if you get faction total power more than 1000 then you can claim areas and overclaim other faction land if you have more power than them!
 
-/F TOPFACTIONS COMMAND IS READY. I NEED 50 STARS THEN I WILL RELEASE IT!
+/F TOPFACTIONS COMMAND IS READY. I NEED 10 STARS THEN I WILL RELEASE IT!
 
 ### Version
 1.7.3
