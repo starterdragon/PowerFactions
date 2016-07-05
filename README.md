@@ -6,10 +6,10 @@
 
 > Add power management in your Faction server also if you get faction total power more than 1000 then you can claim areas and overclaim other faction land if you have more power than them!
 
-/F TOPFACTIONS COMMAND AND ECONOMY SUPPORT (TAKES MONEY TO CREATE A FAC OR CLAIM A PLOT) IS READY. I NEED APPROX 20 STARS THEN I WILL RELEASE IT!
+ECONOMY API SUPPORT (TAKES MONEY TO CREATE A FAC/CLAIM A PLOT/OVERCLAIM A PLOT) IS READY. I NEED APPROX 35 STARS THEN I WILL RELEASE IT!
 
 ### Version
-1.7.3
+1.8.3
 ### Installation
 
 >You need to extract the plugin first!
@@ -23,11 +23,15 @@
 ### TO-DOs
 
  - /f chat command
+ - /f list (Gives Player names in the Player's Faction)
+ - /f list (faction_name) (Gives Player names in any Faction)
+ - /f search (player_name) (Shows Player Faction and gives info of that Faction)
 
 License
 ----
 
 MIT
 
+>CHECK DEMO OF THIS PLUGIN AT 24/7 SURVIVAL/FACTION/PRISON/MINIGAMES/CREATIVE SERVER. IP: FALLENTECH.TK PORT: 19132
 
 **Free plugin! Dont forget to star so that i would release /f topfaction command!**
