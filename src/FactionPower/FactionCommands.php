@@ -871,6 +871,26 @@ class FactionCommands {
 					if(strtolower($args[0] == 'about')) {
 						$sender->sendMessage(TextFormat::GREEN . "\nPowerFactions v1.7.3 by " . TextFormat::GOLD . "FallenTech-PE! Infernus101/n§bIP: Fallentech.tk/n§bPort: 19132");
 					}
+					 /////////////////////////////// TOPFACTIONS ///////////////////////////////
+					
+					if(strtolower($args[0]) == 'top') {
+						$result = $this->plugin->db->query("SELECT * FROM strength ORDER BY power DESC LIMIT 5;"); 			
+						 $i = 1; 
+						 
+						while($row = $result->fetchArray(SQLITE3_ASSOC)){
+							if($this->plugin->factionExists($row['faction'])) {
+						    $fac = $row['faction'];
+							$res = $this->plugin->db->query("SELECT * FROM motd WHERE faction='$fac';");
+							$arr = $res->fetchArray(SQLITE3_ASSOC);
+							$motd = $arr["message"];
+							$lead = $this->plugin->getLeader($row['faction']);
+							$num = $this->plugin->getNumberOfPlayers($row['faction']);
+							$pow = $this->plugin->getFactionPower($row['faction']);
+							$sender->sendMessage(TextFormat::BOLD . $i . ". §6$fac\n§4Leader:§f $lead §ePlayers:§f $num/10 §bPower:§f $pow §5MOTD: §o§f$motd\n");
+						    $i++; 
+						}  
+						}
+					}
 				}
 			}
 		} else {
