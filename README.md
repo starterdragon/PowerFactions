@@ -20,12 +20,45 @@ ECONOMY API SUPPORT (TAKES MONEY TO CREATE A FAC/CLAIM A PLOT/OVERCLAIM A PLOT) 
 
 >If you want, PureChat support you need to change faction-power in all the files to Faction'sPro even the namespace and plugin name!
 
-### TO-DOs
+### All Commands:
+ - /f top - Shows Top Faction
+ - /f power - Shows Faction power
+ - /f seepower - See other Faction's power
+ - /f help - Shows the list of commands available
+ - /f about - DEV NAME
+ - /f create - Create a Faction
+ - /f accept - Accept the invitation
+ - /f deny - Deny the invitation
+ - /f claim - Claim a Faction Plot 
+ - /f unclaim - Unclaim the plot
+ - /f overclaim - Overclaim other Faction's plot
+ - /f info - Gives the info of the Faction
+ - /f invite - Invite players to the Faction
+ - /f disband - Delete Faction
+ - /f leave - Leave a Faction
+ - /f kick - Kick players from your Faction
+ - /f sethome - Set Faction Home
+ - /f unsethome - Unset Faction Home
+ - /f home - Teleports to the Faction Home
+ - /f ally - Ally with other factions
+ - /f unally - Unally a Faction
+ - /f promote - Promote a player to Officer
+ - /f demote - Demote a player to Member
+ - /f aacept - Accept an Ally request
+ - /f adeny - Deny an Ally request
+ - /f plotinfo - Gives the info of the Faction who claimed the Plot
+ - /f motd - Set the motd for the Faction
 
+### Staff Commands:
+ - /f disband - Disband a Faction
+ - /f faddpower - Add power to your Faction
+ - /f funclaim - Unclaim any Faction's Plot
+### TO-DOs
+ - /f btop - Broadcasts Top Factions to the server
  - /f chat command
- - /f list (Gives Player names in the Player's Faction)
- - /f list (faction_name) (Gives Player names in any Faction)
- - /f search (player_name) (Shows Player Faction and gives info of that Faction)
+ - /f list - (Gives Player names in the Player's Faction)
+ - /f list - (faction_name) (Gives Player names in any Faction)
+ - /f search - (player_name) (Shows Player Faction and gives info of that Faction)
 
 License
 ----
