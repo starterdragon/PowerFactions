@@ -321,7 +321,7 @@ class FactionCommands {
 							return true;
 						} 
                         if($args[1] == 4) {
-                            $sender->sendMessage(TextFormat::GOLD . "§3-+ Factions Help Page 4/5 +-" . TextFormat::WHITE . "\n§6/f power §f- View your faction's power\n§6/f seepower <faction> §f- View faction power\n§6/f ally <faction> §f- Request for an ally\n§6/f unally <faction> §f- Unally a faction\n§6/f aaccept §f- Accept an ally request\n§6/f adeny §f- Deny an ally request\n§6/f pos - Get faction info of your current position");
+                            $sender->sendMessage(TextFormat::GOLD . "§3-+ Factions Help Page 4/5 +-" . TextFormat::WHITE . "\n§6/f power §f- View your faction's power\n§6/f seepower <faction> §f- View faction power\n§6/f ally <faction> §f- Request for an ally\n§6/f unally <faction> §f- Unally a faction\n§6/f aaccept §f- Accept an ally request\n§6/f adeny §f- Deny an ally request\n§6/f plotinfo - Get faction info of your current position");
 							return true;
                         } else {
                             $sender->sendMessage(TextFormat::GOLD . "Factions Staff Help Page" . TextFormat::WHITE . "\n§6/f funclaim <faction> §f- Unclaim all land of target faction\n§6/f fdisband <faction> §g- Disband a faction\n§6/f faddpower <faction> <number> §f- Add power to a faction");
@@ -386,7 +386,7 @@ class FactionCommands {
                         $faction_power = $this->plugin->getFactionPower($faction);
 						$sender->sendMessage($this->plugin->formatMessage("Land successfully claimed.", true));
 					}
-                    if(strtolower($args[0]) == 'pos'){
+                    if(strtolower($args[0]) == 'plotinfo'){
                         $x = floor($sender->getX());
 						$y = floor($sender->getY());
 						$z = floor($sender->getZ());
