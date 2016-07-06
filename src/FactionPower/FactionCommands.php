@@ -317,7 +317,7 @@ class FactionCommands {
 							return true;
 						} 
                         if($args[1] == 3) {
-							$sender->sendMessage(TextFormat::GOLD . "§3-+ Factions Help Page 3/5 +-" . TextFormat::WHITE . "\n§6/f msg §f- Set message of your faction\n§6/f promote <player> §f- Promote a player to Officer\n§6/f sethome §f- Set home for your faction\n§6/f unclaim §f- Unclaim land claimed by your faction\n§6/f unsethome §f- Remove the current home of your faction");
+							$sender->sendMessage(TextFormat::GOLD . "§3-+ Factions Help Page 3/5 +-" . TextFormat::WHITE . "\n§6/f motd §f- Set message of your faction\n§6/f promote <player> §f- Promote a player to Officer\n§6/f sethome §f- Set home for your faction\n§6/f unclaim §f- Unclaim land claimed by your faction\n§6/f unsethome §f- Remove the current home of your faction");
 							return true;
 						} 
                         if($args[1] == 4) {
@@ -511,9 +511,9 @@ class FactionCommands {
 						$sender->sendMessage($this->plugin->formatMessage("Land successfully unclaimed", true));
 					}
 					
-					/////////////////////////////// MSG ///////////////////////////////
+					/////////////////////////////// MOTD ///////////////////////////////
 					
-					if(strtolower($args[0]) == "msg") {
+					if(strtolower($args[0]) == "motd") {
 						if($this->plugin->isInFaction($sender->getName()) == false) {
 							$sender->sendMessage($this->plugin->formatMessage("You must be in a faction to use this"));
 							return true;
