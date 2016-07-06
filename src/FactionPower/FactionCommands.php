@@ -309,7 +309,7 @@ class FactionCommands {
 					}
 					if(strtolower($args[0]) == "help") {//forceunclaim
 						if(!isset($args[1]) || $args[1] == 1) {
-							$sender->sendMessage("§3-+ Factions Help Page 1/5 +-" . TextFormat::WHITE . "\n§6/f about\n§6/f accept §f- Accept an invite to a faction\n§6/f overclaim §f- Overclaim land of an opposing faction\n§6/f claim §f- Claim land for your faction\n§6/f create <name> §f- Create a faction\n§6/f disband §f- Disband your faction\n§6/f demote <player> §f- Demote a player to member\n§6/f deny §f- Deny an invite to a faction");
+							$sender->sendMessage("§3-+ Factions Help Page 1/5 +-" . TextFormat::WHITE . "\n§6/f about\n§6/f accept §f- Accept an invite to a faction\n§6/f overclaim §f- Overclaim land of an opposing faction\n§6/f claim §f- Claim land for your faction\n§6/f create <name> §f- Create a faction\n§6/f disband §f- Disband your faction\n§6/f demote <player> §f- Demote a player to member\n§6/f deny §f- Deny an invite to a faction\n§6/f top §f-SEE TOP FACTIONS!");
 							return true;
 						}
 						if($args[1] == 2) {
