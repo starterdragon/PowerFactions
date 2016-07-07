@@ -53,6 +53,7 @@ ECONOMY API SUPPORT (TAKES MONEY TO CREATE A FAC/CLAIM A PLOT/OVERCLAIM A PLOT) 
  - /f disband - Disband a Faction
  - /f faddpower - Add power to your Faction
  - /f funclaim - Unclaim any Faction's Plot
+
 ### TO-DOs
  - /f btop - Broadcasts Top Factions to the server
  - /f chat command
