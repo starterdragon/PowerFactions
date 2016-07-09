@@ -29,6 +29,7 @@ ECONOMY API SUPPORT (TAKES MONEY TO CREATE A FAC/CLAIM A PLOT/OVERCLAIM A PLOT) 
  - /f create - Create a Faction
  - /f accept - Accept the invitation
  - /f deny - Deny the invitation
+ - /f members - See members in your Faction
  - /f claim - Claim a Faction Plot 
  - /f unclaim - Unclaim the plot
  - /f overclaim - Overclaim other Faction's plot
