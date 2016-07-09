@@ -309,11 +309,11 @@ class FactionCommands {
 					}
 					if(strtolower($args[0]) == "help") {//forceunclaim
 						if(!isset($args[1]) || $args[1] == 1) {
-							$sender->sendMessage("§3-+ Factions Help Page 1/5 +-" . TextFormat::WHITE . "\n§6/f about\n§6/f accept §f- Accept an invite to a faction\n§6/f overclaim §f- Overclaim land of an opposing faction\n§6/f claim §f- Claim land for your faction\n§6/f create <name> §f- Create a faction\n§6/f disband §f- Disband your faction\n§6/f demote <player> §f- Demote a player to member\n§6/f deny §f- Deny an invite to a faction\n§6/f top §f-SEE TOP FACTIONS!");
+							$sender->sendMessage("§3-+ Factions Help Page 1/5 +-" . TextFormat::WHITE . "\n§6/f about\n§6/f accept §f- Accept an invite to a faction\n§6/f overclaim §f- Overclaim land of an opposing faction\n§6/f claim §f- Claim land for your faction\n§6/f create <name> §f- Create a faction\n§6/f disband §f- Disband your faction\n§6/f demote <player> §f- Demote a player to member\n§6/f deny §f- Deny an invite to a faction\n§6/f top §f-See the top Factions in game!");
 							return true;
 						}
 						if($args[1] == 2) {
-							$sender->sendMessage(TextFormat::DARK_AQUA . "-+ Factions Help Page 2/5 +-" . TextFormat::WHITE . "\n§6/f home §f- Teleport to your factions home\n§6/f help <page> §f- Bring up current menu\n§6/f info <faction> §f- View faction info\n§6/f invite <player> §f- Invite a player to your faction\n§6/f kick <player> §f- Kick a player from your faction\n§6/f leader <player> §f- Promote a player to leader of your faction\n§6/f leave §f- Leave your faction");
+							$sender->sendMessage(TextFormat::DARK_AQUA . "-+ Factions Help Page 2/5 +-" . TextFormat::WHITE . "\n§6/f home §f- Teleport to your factions home\n§6/f help <page> §f- Bring up current menu\n§6/f info <faction> §f- View faction info\n§6/f invite <player> §f- Invite a player to your faction\n§6/f kick <player> §f- Kick a player from your faction\n§6/f leader <player> §f- Promote a player to leader of your faction\n§6/f members §f- See your Faction Members\n§6/f leave §f- Leave your faction");
 							return true;
 						} 
                         if($args[1] == 3) {
@@ -893,7 +893,31 @@ class FactionCommands {
 					}
 				}
 			}
-		} else {
+		} 		 /////////////////////////////// MEMBERS ///////////////////////////////
+					
+				if(strtolower($args[0]) == 'members') {
+						if(!$this->plugin->isInFaction($player)) {
+							$sender->sendMessage($this->plugin->formatMessage("§6- §cYou must be in a faction to do this."));
+                            return true;
+						} else{
+						$fact1 = $this->plugin->getPlayerFaction(strtolower($sender->getName())); 
+						$lead = $this->plugin->getLeader($fact1);
+						$num = $this->plugin->getNumberOfPlayers($fact1);
+						$pow = $this->plugin->getFactionPower($fact1);
+						$sender->sendMessage(TextFormat::BOLD . "§aFaction: §6§o$fact1 §4Leader:§f $lead §ePlayers:§f $num/10 §bPower:§f $pow\n");
+						$result = $this->plugin->db->query("SELECT * FROM master WHERE faction='$fact1' ORDER BY rank DESC;"); 			
+						$i = 1;    
+						while($row = $result->fetchArray(SQLITE3_ASSOC)){
+						$rank1 = $row['rank'];
+						$play = $row['player'];
+						$sender->sendMessage(TextFormat::WHITE . $i . "§b$play -> §a$rank1\n");
+						 $i++;
+						}
+					}
+				}
+			}
+		}
+		else {
 			$this->plugin->getServer()->getLogger()->info($this->plugin->formatMessage("Command must be run ingame"));
 		}
 	}
