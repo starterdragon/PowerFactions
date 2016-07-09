@@ -910,7 +910,7 @@ class FactionCommands {
 						while($row = $result->fetchArray(SQLITE3_ASSOC)){
 						$rank1 = $row['rank'];
 						$play = $row['player'];
-						$sender->sendMessage(TextFormat::WHITE . $i . "§b$play -> §a$rank1\n");
+						$sender->sendMessage(TextFormat::WHITE . $i . " §b$play -> §a$rank1\n");
 						 $i++;
 						}
 					}
