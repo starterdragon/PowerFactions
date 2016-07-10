@@ -56,8 +56,6 @@ ECONOMY API SUPPORT (TAKES MONEY TO CREATE A FAC/CLAIM A PLOT/OVERCLAIM A PLOT) 
  - /f funclaim - Unclaim any Faction's Plot
 
 ### TO-DOs
- - /f btop - Broadcasts Top Factions to the server
- - /f chat command
  - /f search - (player_name) (Shows Player Faction and gives info of that Faction)
 
 License
