@@ -893,9 +893,9 @@ class FactionCommands {
 					}
 				}
 			}
-		} 	 /////////////////////////////// INFO ///////////////////////////////
+		} 	 /////////////////////////////// MEMBERS ///////////////////////////////
 					
-				if(strtolower($args[0]) == 'info') {
+				if(strtolower($args[0]) == 'members') {
 						if(!$this->plugin->isInFaction($player)) {
 							$sender->sendMessage($this->plugin->formatMessage("§6- §cYou must be in a faction to do this."));
                             return true;
