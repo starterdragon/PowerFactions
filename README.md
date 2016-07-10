@@ -6,7 +6,7 @@
 
 > Add power management in your Faction server also if you get faction total power more than 1000 then you can claim areas and overclaim other faction land if you have more power than them!
 
-ECONOMY API SUPPORT (TAKES MONEY TO CREATE A FAC/CLAIM A PLOT/OVERCLAIM A PLOT) IS READY. I NEED APPROX 50 STARS THEN I WILL RELEASE IT!
+ECONOMY API SUPPORT (TAKES MONEY TO CREATE A FAC/CLAIM A PLOT/OVERCLAIM A PLOT) IS READY. I NEED APPROX 20 STARS THEN I WILL RELEASE IT!
 
 ### Version
 1.8.3
@@ -58,8 +58,6 @@ ECONOMY API SUPPORT (TAKES MONEY TO CREATE A FAC/CLAIM A PLOT/OVERCLAIM A PLOT) 
 ### TO-DOs
  - /f btop - Broadcasts Top Factions to the server
  - /f chat command
- - /f list - (Gives Player names in the Player's Faction)
- - /f list - (faction_name) (Gives Player names in any Faction)
  - /f search - (player_name) (Shows Player Faction and gives info of that Faction)
 
 License
