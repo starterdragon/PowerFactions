@@ -313,7 +313,7 @@ class FactionCommands {
 							return true;
 						}
 						if($args[1] == 2) {
-							$sender->sendMessage(TextFormat::DARK_AQUA . "-+ Factions Help Page 2/5 +-" . TextFormat::WHITE . "\n§6/f home §f- Teleport to your factions home\n§6/f help <page> §f- Bring up current menu\n§6/f info <faction> §f- View faction info\n§6/f invite <player> §f- Invite a player to your faction\n§6/f kick <player> §f- Kick a player from your faction\n§6/f leader <player> §f- Promote a player to leader of your faction\n§6/f members §f- See your Faction Members\n§6/f leave §f- Leave your faction");
+							$sender->sendMessage(TextFormat::DARK_AQUA . "-+ Factions Help Page 2/5 +-" . TextFormat::WHITE . "\n§6/f home §f- Teleport to your factions home\n§6/f help <page> §f- Bring up current menu\n§6/f info <faction> §f- View faction info\n§6/f invite <player> §f- Invite a player to your faction\n§6/f kick <player> §f- Kick a player from your faction\n§6/f leader <player> §f- Promote a player to leader of your faction\n§6/f members <faction> §f- See Faction's Members\n§6/f leave §f- Leave your faction");
 							return true;
 						} 
                         if($args[1] == 3) {
@@ -893,21 +893,55 @@ class FactionCommands {
 					}
 				}
 			}
-		} 		 /////////////////////////////// MEMBERS ///////////////////////////////
+		} 	 /////////////////////////////// INFO ///////////////////////////////
 					
-				if(strtolower($args[0]) == 'members') {
+				if(strtolower($args[0]) == 'info') {
 						if(!$this->plugin->isInFaction($player)) {
 							$sender->sendMessage($this->plugin->formatMessage("§6- §cYou must be in a faction to do this."));
                             return true;
-						} else{
-						$fact1 = $this->plugin->getPlayerFaction(strtolower($sender->getName())); 
-						$lead = $this->plugin->getLeader($fact1);
-						$num = $this->plugin->getNumberOfPlayers($fact1);
-						$pow = $this->plugin->getFactionPower($fact1);
-						$sender->sendMessage(TextFormat::BOLD . "§aFACTION: §6§o$fact1 §4Leader:§f $lead §ePlayers:§f $num/10 §bPower:§f $pow\n§o§l§6Players:\n§f1. §b$lead -> §aLeader\n");
-						$result = $this->plugin->db->query("SELECT * FROM master WHERE faction='$fact1' ORDER BY rank DESC;"); 			
+						} else if(isset($args[1])) {
+							if( !(ctype_alnum($args[1])) | !($this->plugin->factionExists($args[1]))) {
+								$sender->sendMessage($this->plugin->formatMessage("§6- §cFaction does not exist"));
+								return true;
+							} 
+						$fact2 = $args[1];
+						$lead1 = $this->plugin->getLeader($fact2);
+						$result3 = $this->plugin->db->query("SELECT * FROM motd WHERE faction='$fact2';");
+						$array2 = $result3->fetchArray(SQLITE3_ASSOC);
+						$motd2 = $array2["message"];
+						$num1 = $this->plugin->getNumberOfPlayers($fact2);
+						$pow1 = $this->plugin->getFactionPower($fact2);
+						$fact2 = strtoupper($fact2);
+						$sender->sendMessage(TextFormat::BOLD . "----|+|----FACTIONS----|+|----\n§aFACTION: §6§o$fact2 §cLeader:§f $lead1 §ePlayers:§f $num1/10 §bPower:§f $pow1 §dMOTD:§f $motd2\n§o§l§fPlayers:\n§f1. §b$lead1 -> §aLeader\n");
+						$result1 = $this->plugin->db->query("SELECT * FROM master WHERE faction='$fact2' ORDER BY rank DESC;"); 			
 						$i = 2;    
 						
+						while($row1 = $result1->fetchArray(SQLITE3_ASSOC)){
+						$rank2 = $row1['rank'];
+						$play1 = $row1['player'];
+						if($rank2 == 'Leader')
+						{
+						return true;
+						}
+							else{
+						$play1 = strtoupper($play1);
+						$sender->sendMessage(TextFormat::WHITE . $i . ". §b$play1 -> §a$rank2\n");
+						 $i++;
+						}}
+						}
+					 else
+						{
+						$fact1 = $this->plugin->getPlayerFaction(strtolower($sender->getName())); 
+						$lead = $this->plugin->getLeader($fact1);
+						$result2 = $this->plugin->db->query("SELECT * FROM motd WHERE faction='$fact1';");
+						$array1 = $result2->fetchArray(SQLITE3_ASSOC);
+						$motd1 = $array1["message"];
+						$num = $this->plugin->getNumberOfPlayers($fact1);
+						$pow = $this->plugin->getFactionPower($fact1);
+						$fact1 = strtoupper($fact1);
+						$sender->sendMessage(TextFormat::BOLD . "----|+|----FACTIONS----|+|----\n§aFACTION: §6§o$fact1 §cLeader:§f $lead §ePlayers:§f $num/10 §bPower:§f $pow §dMOTD:§f $motd1\n§o§l§fPlayers:\n§f1. §b$lead -> §aLeader\n");
+						$result = $this->plugin->db->query("SELECT * FROM master WHERE faction='$fact1' ORDER BY rank DESC;"); 			
+						$i = 1;    
 						while($row = $result->fetchArray(SQLITE3_ASSOC)){
 						$rank1 = $row['rank'];
 						$play = $row['player'];
@@ -915,12 +949,13 @@ class FactionCommands {
 						{
 						return true;
 						}
-							else{
-						$sender->sendMessage(TextFormat::WHITE . $i . " §b$play -> §a$rank1\n");
+							else{	
+					    $play = strtoupper($play);
+						$sender->sendMessage(TextFormat::WHITE . $i . ". §b$play -> §a$rank1\n");
 						 $i++;
-						}}
+							}}
 					}
-				}
+				
 			}
 		}
 		else {
