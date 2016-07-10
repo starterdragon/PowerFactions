@@ -187,6 +187,10 @@ class FactionCommands {
 							$sender->sendMessage($this->plugin->formatMessage("§6- §cPlayer is already Officer"));
 							return true;
 						}
+						if($this->plugin->isLeader($args[1])) {
+							$sender->sendMessage($this->plugin->formatMessage("§6- §cThe target is the Leader, maybe it's you"));
+							return true;
+						}
                         if(!($this->plugin->getServer()->getPlayer($args[1]) instanceof Player)) {
 							$sender->sendMessage($this->plugin->formatMessage("§6- §cPlayer is offline!"));
                             return true;
